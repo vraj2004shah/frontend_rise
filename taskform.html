@@ -4,170 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validated Form</title>
 </head>
 
 <body>
-    <form action="">
+    <form action="" method="post">
         <fieldset>
-            <legend>
-                <h1>Basic Inputs</h1>
-            </legend>
+            <legend><h1>Basic Inputs</h1></legend>
             <div>
-                <label for="">Full Name :</label>
-                <input type="text" placeholder="enter name" required>
+                <label for="fullname">Full Name :</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter name" required>
             </div>
             <br>
             <div>
-                <label for="">Email Address :</label>
-                <input type="text" placeholder="enter Email Address" required>
+                <label for="email">Email Address :</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
             </div>
             <br>
             <div>
-                <label for="">Password :</label>
-                <input type="password" name="" id="" minlength="6">
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password" minlength="6" required>
             </div>
             <br>
             <div>
-                <label for="">Confirm Password :</label>
-                <input type="password" name="" id="" minlength="6">
+                <label for="confirm_password">Confirm Password :</label>
+                <input type="password" id="confirm_password" name="confirm_password" minlength="6" required>
             </div>
-
         </fieldset>
 
         <fieldset>
-            <legend>
-                <h1>Contact Information</h1>
-            </legend>
+            <legend><h1>Contact Information</h1></legend>
             <div>
-                <label for="">Phone Number :</label>
-                <input type="tel" name="" id="" pattern="10">
+                <label for="phone">Phone Number :</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Enter 10-digit phone number" required>
             </div>
-
             <br>
-
             <div>
-                <label for="">WEbsite/Portfolio URL</label>
-                <input type="url" name="" id="">
+                <label for="website">Website/Portfolio URL :</label>
+                <input type="url" id="website" name="website">
             </div>
-
             <br>
-
             <div>
-                <label for="">Upload profile picture / Resume</label>
-                <input type="file" name="" id="">
+                <label for="file">Upload profile picture / Resume :</label>
+                <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png,.pdf">
             </div>
-
         </fieldset>
-
         <fieldset>
-            <legend>
-                <h1>Selection Input</h1>
-            </legend>
-
+            <legend><h1>Selection Input</h1></legend>
             <div>
-                <label for="gender">Gender:</label>
-                <br>
-                <label for="gender">male</label>
-                <input type="radio" name="male" id="">
-                <label for="gender">female</label>
-                <input type="radio"  name="male"  id="">
-
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
             </div>
             <br>
-            <label for="Skills">Skills:</label>
-            <br>
-            <label for="Skills">Html</label>
-            <input type="checkbox" id="">
-            <label for="Skills">CSS</label>
-            <input type="checkbox" id="">
-            <label for="Skills">Javascript</label>
-            <input type="checkbox" id="">
-            <label for="Skills">Angular</label>
-            <input type="checkbox" id="">
-            <label for="Skills">React</label>
-            <input type="checkbox" id="">
-            <br> <br>
             <div>
-                <label for="Location">Preferred Location</label>
-                <br>
-                <select name="Location" id="">
-                    <option value="">
-                        city
-                    </option>
-                    <option value="" selected>Vadodara</option>
-                    <option value="">Ahmedabad</option>
-                    <option value="">Rajkot</option>
-                    <option value="">Surat</option>
+                <label>Skills:</label><br>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="skills" value="JavaScript">
+                <label for="js">JavaScript</label>
+                <input type="checkbox" id="angular" name="skills" value="Angular">
+                <label for="angular">Angular</label>
+                <input type="checkbox" id="react" name="skills" value="React">
+                <label for="react">React</label>
+            </div>
+            <br>
+            <div>
+                <label for="location">Preferred Location:</label><br>
+                <select id="location" name="location" required>
+                    <option value="">Select City</option>
+                    <option value="Vadodara" selected>Vadodara</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Surat">Surat</option>
                 </select>
             </div>
         </fieldset>
 
+       
         <fieldset>
-            <legend><h1>Advance Inputs</h1></legend>
+            <legend><h1>Advanced Inputs</h1></legend>
             <div>
-                <label for="">Date Of Birth :</label>
-                <input type="date" name="" id="">
+                <label for="dob">Date Of Birth :</label>
+                <input type="date" id="dob" name="dob" required>
             </div>
             <div>
-                <label for="">select a week :</label>
-                <input type="week" name="" id="">
+                <label for="week">Select a week :</label>
+                <input type="week" id="week" name="week">
             </div>
             <div>
-                <label for="">select a month :</label>
-                <input type="month" name="" id="">
+                <label for="month">Select a month :</label>
+                <input type="month" id="month" name="month">
             </div>
             <div>
-                <label for="">choose a time :</label>
-                <input type="time" name="" id="">
+                <label for="time">Choose a time :</label>
+                <input type="time" id="time" name="time">
             </div>
             <div>
-                <label for="">date&time :</label>
-                <input type="datetime" name="" id="">
+                <label for="datetime">Date & Time :</label>
+                <input type="datetime-local" id="datetime" name="datetime">
             </div>
             <div>
-                <label for="">Pick your Favourite color :</label>
-                <input type="color" name="" id="">
+                <label for="color">Pick your favourite color :</label>
+                <input type="color" id="color" name="color">
             </div>
             <div>
-                <label for="">age:</label>
-                <input type="number" name="" id="" min="1" max="10">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="100">
             </div>
             <div>
-                <label for="">Range for experience :</label>
-                <input type="range" name="" id="" min="0" max="20" >
+                <label for="experience">Range for experience :</label>
+                <input type="range" id="experience" name="experience" min="0" max="20">
             </div>
         </fieldset>
-         <fieldset>
-            <legend><h1>text Inputs</h1></legend>
-            <div>
-             <label for="">about youself:</label>
-            <textarea name="" rows="4"></textarea>
-            </div>
-            <div>
-             <label for="">Adrress:</label>
-            <textarea name="" ></textarea>
-            </div>
-         </fieldset>
-         <fieldset>
-            <legend>hidden field</legend>
-            <div>
-             <label for="">hidden field:</label>
-             <input type="hidden" name="form-version=v2" >
-            </div>
-         </fieldset>
-         <fieldset>
-            <legend>other control:</legend>
-            <div>
-                <label>reset button:</label>
-                <button type="reset" >reset</button>
-            </div>
-            <div>
-                <label>submit button:</label>
-                <button type="submit" >submit</button>
-            </div>
-         </fieldset>
 
+      
+        <fieldset>
+            <legend><h1>Text Inputs</h1></legend>
+            <div>
+                <label for="about">About Yourself:</label>
+                <textarea id="about" name="about" rows="4"></textarea>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>hidden field</legend>
+                <input type="hidden" name="form-version" value="v2">
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>Form Controls</legend>
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </fieldset>
     </form>
 </body>
 
